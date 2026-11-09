@@ -285,6 +285,11 @@
   .ba-col .label{font-family:Oswald,sans-serif;font-weight:600;text-transform:uppercase;font-size:clamp(18px,3vw,24px);margin-bottom:12px}
   .ba-col.after .label{color:var(--orange)}
   .ba .ph{aspect-ratio:9/16}
+  .ba-media{position:relative;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#111;box-shadow:0 14px 30px -14px rgba(0,0,0,.55)}
+  .ba-media img,.ba-media video{display:block;width:100%;height:100%;object-fit:cover}
+  .ba-days{position:absolute;left:50%;bottom:8%;transform:translateX(-50%);white-space:nowrap;font-weight:800;font-size:clamp(11px,2.2vw,15px);color:#fff;padding:6px 12px;border-radius:999px;background:var(--grad);box-shadow:0 6px 16px -6px rgba(0,0,0,.7)}
+  .ba-col:first-child .ba-days{background:var(--red)}
+  .ba-col:first-child .ba-media img{filter:saturate(.85)}
   .ba-arrow{width:44px;height:44px;border-radius:50%;background:var(--grad);display:grid;place-items:center}
   .ba-arrow svg{width:22px;height:22px;color:#fff}
   @media(max-width:520px){.ba{gap:8px}.ba-arrow{width:34px;height:34px}.ba .ph{font-size:11px;padding:10px}.ba .ph b{font-size:11px}}
@@ -297,6 +302,8 @@
   .arg p{color:var(--muted);font-size:15px}
 
   .proof-title{margin-top:80px}
+  .depo{display:grid;gap:14px;max-width:560px;margin:28px auto 0}
+  .depo img{display:block;width:100%;height:auto;border-radius:16px;box-shadow:0 14px 30px -16px rgba(0,0,0,.55)}
   .proof{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:32px}
   @media(min-width:768px){.proof{grid-template-columns:repeat(3,1fr);gap:16px}}
   .proof .ph{aspect-ratio:4/5}
@@ -489,7 +496,39 @@
   </div>
 </section>
 
-<!-- ============ 2 · A DOR REAL ============ -->
+<!-- ============ 2 · RESULTADOS (mesma seção da página A) ============ -->
+<section class="results"><section class="results">
+  <div class="wrap">
+    <div class="center narrow">
+      <h2>Veja os <span class="hl">resultados:</span></h2>
+    </div>
+    <div class="results-grid">
+      <div class="rphone">
+        <div class="fmt"><small>REFERÊNCIA Nº</small><b>47</b></div>
+        <div class="frame"><span class="notch"></span><div class="screen"><video class="rp-video" src="assets/criativos/047/video.mp4" poster="assets/criativos/047/capa.jpg" muted loop playsinline preload="none"></video><span class="rp-days">987 dias no ar</span></div></div>
+        <img class="roas-print" src="assets/roas/roas-3-41.png" alt="ROAS de resultados 3,41 no Gerenciador de Anúncios" width="148" height="102">
+      </div>
+      <div class="rphone">
+        <div class="fmt"><small>REFERÊNCIA Nº</small><b>03</b></div>
+        <div class="frame"><span class="notch"></span><div class="screen"><video class="rp-video" src="assets/criativos/003/video.mp4" poster="assets/criativos/003/capa.jpg" muted loop playsinline preload="none"></video><span class="rp-days">834 dias no ar</span></div></div>
+        <img class="roas-print" src="assets/roas/roas-2-89.png" alt="ROAS de resultados 2,89 no Gerenciador de Anúncios" width="144" height="103">
+      </div>
+      <div class="rphone">
+        <div class="fmt"><small>REFERÊNCIA Nº</small><b>55</b></div>
+        <div class="frame"><span class="notch"></span><div class="screen"><video class="rp-video" src="assets/criativos/055/video.mp4" poster="assets/criativos/055/capa.jpg" muted loop playsinline preload="none"></video><span class="rp-days">794 dias no ar</span></div></div>
+        <img class="roas-print" src="assets/roas/roas-2-72.png" alt="ROAS de resultados 2,72 no Gerenciador de Anúncios" width="143" height="105">
+      </div>
+      <div class="rphone">
+        <div class="fmt"><small>REFERÊNCIA Nº</small><b>77</b></div>
+        <div class="frame"><span class="notch"></span><div class="screen"><video class="rp-video" src="assets/criativos/077/video.mp4" poster="assets/criativos/077/capa.jpg" muted loop playsinline preload="none"></video><span class="rp-days">791 dias no ar</span></div></div>
+        <img class="roas-print" src="assets/roas/roas-2-55.png" alt="ROAS de resultados 2,55 no Gerenciador de Anúncios" width="142" height="100">
+      </div>
+    </div>
+    <p class="disclaimer" style="margin-top:36px">ROAS de resultados no Gerenciador de Anúncios. Os resultados variam de acordo com a aplicação.</p>
+  </div>
+</section></section>
+
+<!-- ============ 3 · A DOR REAL ============ -->
 <section class="s-light">
   <div class="wrap">
     <div class="center narrow">
@@ -511,9 +550,9 @@
     <div class="ba">
       <div class="ba-col">
         <p class="label">Cara de “lojinha”</p>
-        <div class="ph"><b>Antes</b>Foto da peça no cabide<small>1080×1920</small></div>
+        <div class="ba-media"><img src="assets/antes-depois/antes.jpg" alt="Anúncio de loja com dois vestidos em manequins" width="1080" height="1920" loading="lazy"><span class="ba-days">2 dias no ar</span></div>
         <ul class="ba-list bad">
-          <li>Ignorado em 0.2 segundos</li>
+          <li>Saiu do ar em 2 dias</li>
           <li>Cliente acha “caro”</li>
           <li>Estoque parado</li>
         </ul>
@@ -521,20 +560,20 @@
       <div class="ba-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
       <div class="ba-col after">
         <p class="label">Cara de marca</p>
-        <div class="ph"><b>Depois</b>A mesma peça num formato de alta retenção<small>1080×1920</small></div>
+        <div class="ba-media"><video src="assets/antes-depois/depois.mp4" poster="assets/antes-depois/depois.jpg" autoplay muted loop playsinline preload="metadata"></video><span class="ba-days">356 dias no ar</span></div>
         <ul class="ba-list good">
-          <li>Para o scroll</li>
+          <li>No ar há quase 1 ano</li>
           <li>Cliente paga sem pedir desconto</li>
           <li>Arara girando</li>
         </ul>
       </div>
     </div>
 
-    <p class="punch">Mesma peça. Mesma loja. <span class="hl">Só o formato mudou.</span></p>
+    <p class="punch">Mesmo nicho. Mesmo tipo de peça. <span class="hl">Só o formato mudou.</span></p>
   </div>
 </section>
 
-<!-- ============ 3 · A SOLUÇÃO: O ARSENAL ============ -->
+<!-- ============ 4 · A SOLUÇÃO: O ARSENAL ============ -->
 <section class="demo" id="demo">
   <div class="wrap">
     <div class="center narrow">
@@ -596,41 +635,17 @@
   </div>
 </dialog>
 
-<!-- ============ 4 · PROVA SOCIAL / VALIDAÇÃO ============ -->
-<section class="s-light results">
+<!-- ============ 5 · PROVA SOCIAL / VALIDAÇÃO ============ -->
+<section class="s-light">
   <div class="wrap">
     <div class="center narrow">
       <h2>“Será que <span class="hl">funciona para mim?”</span></h2>
       <p class="mech"><b>Sim.</b> Seja marca gigante ou loja tocada sozinha de casa.</p>
     </div>
-    <div class="results-grid">
-      <div class="rphone">
-        <div class="fmt"><small>REFERÊNCIA Nº</small><b>47</b></div>
-        <div class="frame"><span class="notch"></span><div class="screen"><video class="rp-video" src="assets/criativos/047/video.mp4" poster="assets/criativos/047/capa.jpg" muted loop playsinline preload="none"></video><span class="rp-days">987 dias no ar</span></div></div>
-        <img class="roas-print" src="assets/roas/roas-3-41.png" alt="ROAS de resultados 3,41 no Gerenciador de Anúncios" width="148" height="102">
-      </div>
-      <div class="rphone">
-        <div class="fmt"><small>REFERÊNCIA Nº</small><b>03</b></div>
-        <div class="frame"><span class="notch"></span><div class="screen"><video class="rp-video" src="assets/criativos/003/video.mp4" poster="assets/criativos/003/capa.jpg" muted loop playsinline preload="none"></video><span class="rp-days">834 dias no ar</span></div></div>
-        <img class="roas-print" src="assets/roas/roas-2-89.png" alt="ROAS de resultados 2,89 no Gerenciador de Anúncios" width="144" height="103">
-      </div>
-      <div class="rphone">
-        <div class="fmt"><small>REFERÊNCIA Nº</small><b>55</b></div>
-        <div class="frame"><span class="notch"></span><div class="screen"><video class="rp-video" src="assets/criativos/055/video.mp4" poster="assets/criativos/055/capa.jpg" muted loop playsinline preload="none"></video><span class="rp-days">794 dias no ar</span></div></div>
-        <img class="roas-print" src="assets/roas/roas-2-72.png" alt="ROAS de resultados 2,72 no Gerenciador de Anúncios" width="143" height="105">
-      </div>
-      <div class="rphone">
-        <div class="fmt"><small>REFERÊNCIA Nº</small><b>77</b></div>
-        <div class="frame"><span class="notch"></span><div class="screen"><video class="rp-video" src="assets/criativos/077/video.mp4" poster="assets/criativos/077/capa.jpg" muted loop playsinline preload="none"></video><span class="rp-days">791 dias no ar</span></div></div>
-        <img class="roas-print" src="assets/roas/roas-2-55.png" alt="ROAS de resultados 2,55 no Gerenciador de Anúncios" width="142" height="100">
-      </div>
-    </div>
-    <p class="disclaimer" style="margin-top:36px">ROAS de resultados no Gerenciador de Anúncios. Os resultados variam de acordo com a aplicação.</p>
-    <div class="proof four">
-      <div class="ph"><b>Print 1</b>Depoimento ou resultado de cliente</div>
-      <div class="ph"><b>Print 2</b>Depoimento ou resultado de cliente</div>
-      <div class="ph"><b>Print 3</b>Depoimento ou resultado de cliente</div>
-      <div class="ph"><b>Print 4</b>Depoimento ou resultado de cliente</div>
+    <div class="depo">
+      <img src="assets/depoimentos/depoimento-1.webp" alt="Depoimento de cliente: comprei os 100 criativos e não me arrependi, muito bom mesmo, parabéns pela entrega" width="1000" height="563" loading="lazy">
+      <img src="assets/depoimentos/depoimento-2.webp" alt="Depoimento de cliente no WhatsApp: já consegui usar no meio da correria da loja e acabou me ajudando demais" width="1000" height="946" loading="lazy">
+      <img src="assets/depoimentos/depoimento-3.webp" alt="Depoimento de cliente: eu só postava foto da peça com o preço, peguei uma das ideias e fiz com os looks que tinham chegado" width="1000" height="750" loading="lazy">
     </div>
     <p class="disclaimer">Prints reais de clientes. O resultado depende da aplicação de cada um.</p>
     <div class="cta-wrap">
